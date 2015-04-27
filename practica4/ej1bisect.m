@@ -1,22 +1,23 @@
-function raiz = bisect (f,a,b,tol)
+function raiz = bisect (f,a,b)
+	M=5000;
+	tol=0.00001;
 	if sign(f(a)) == sign(f(b))
 		printf("No se pueden hallar raíces (sign(a) == sign(b))  \n")
 		break
 	else
-		c = (a+b)/2
-		f(c)
-		if f(c) == 0
-			raiz = c;
-		else
-			if abs(f(c)) > tol
-				if sign(f(c)) == sign(f(a))
-					bisect (f,c,b,tol)
-				else
-					bisect (f,a,c,tol)
-				endif
-			else
+		for k=1:M
+			c = (a+b)/2;
+			paso=k;
+			if abs(f(c)) < tol
 				raiz = c;
+				break
+			elseif sign(f(c)) == sign(f(a))
+				a=c;
+			else
+				b=c;
 			endif
-		endif
+		endfor
+		raiz = c;
+		paso
 	endif
 endfunction
