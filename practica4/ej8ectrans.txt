@@ -1,0 +1,35 @@
+f(0) = 1 + 0 - 2 = -1 < 0
+
+3/2 > 1
+e^(3/2) > e^1 > 1
+
+9 > pi
+3/2 > pi/6
+cos(3/2) > cos(pi/6) = 0,5
+
+f(3/2) = e^(3/2) + 5cos(3/2) - 2 > 1 + 5*0,5 - 2 = 1,5 > 0
+
+Existe una raíz en el intervalo (0;3/2) por Bolzano.
+
+Supongamos que existen x =/= y en (0;3/2) tal que f(x) = f(y) = 0
+Por Rolle, existe c en (0;3/2) tal que f'(c) = 0
+
+f'(x) = e^x + 5cos(x)
+Vemos que e^x > 0 para todo x
+Vemos que cos(x) > 0 para todo x en (0;pi/2)
+En particular pi > 3 => pi/2 > 3/2
+Entonces f'(x) > 0 para todo x en (0;3/2)
+
+Entonces x = y ; la raíz es única.
+
+La función iterativa es F(x) = x - f(x)/f'(x). Donde seguro convergerá es un intervalo en donde sea contractiva. Y donde seguro será contractiva es en un intervalo donde F'(x)<1.
+
+(...)
+10cosx - 2 > 0
+cosx > 1/5
+cosx decrece entre 0 y 3/2; entonces tomo x entre 0 y pi/3 donde cosx va de 1 a 1/2 > 1/5.
+
+Entonces seguro convergerá para cualquier x en el intervalo (0;pi/3)
+
+Aplicando el método con valor inicial 0, converge en dos pasos.
+
