@@ -1,0 +1,10 @@
+La función iterativa es F(x) = x - f(x)/f'(x) = x*|x| = x^2 si x<0, -x^2 si x>0
+
+Vemos que 0 es un punto fijo de esta función, y es la abcisa de la raíz de f(x)
+
+Como xn=F(xn-1), vemos que xn debe decrecer en modulo con límite en 0.
+|x^2|<|x| <=> |x|<1 y en este rango la funcion decrecerá siempre.
+
+También F(x) tiene puntos fijos en 1 y -1. Acá la iteración se repitirá cíclicamente sin converger a una raíz (ya que f(1) =/= 0), repitiendo {1,1,1,1,...}.
+
+Por otro lado, |x|>1 <=> |x^2|>|x|, y en este rango la sucesión divergirá, creciendo hacia el infinito, ya que cada xn generado es mayor que el xn-1 anterior y F(x) no tiene cota superior.
